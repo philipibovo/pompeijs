@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Roboto|Source+Code+Pro');
+
+::-webkit-scrollbar{width:6px;border-left:1px solid #E6ECF8}
+::-webkit-scrollbar-thumb{background-color:#ccc}.is-form-page
+
+html, body {
+	margin: 0;
+	padding: 
+	color: #444;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+header, main, section, footer {clear: both;}
+header {
+	width: 100%;
+	background-image: linear-gradient(45deg, #0378A6, #57B56B);
+	padding: 5vh 0;
+	text-align: center;
+}
+header > img {width: 25%}
+main {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+section {
+	width: 90%;
+	margin: 0 5%;
+	padding-top: 5vh;
+}
+section p {
+	margin: 0;
+	line-height: 1.1;
+}
+section#download {
+	background: #fff;
+	text-align: center;
+}
+section#download button, section#download button:active, section#download button:visited {
+	background: #fff	;
+	border: 3px solid #0378A6	;
+	padding: 15px 30px;
+	font-size: 30px;
+	color: #0378A6;
+	transition: 500ms;
+	border-radius: 5px;
+	cursor: pointer;
+}
+section#download > button:hover {
+	background: #0378A6;
+	color: #fff;
+	border-color: #fff;
+	transform: scale(1.2);
+}
+section#download > p {margin: 5px;}
+footer {
+	width: 100%;
+	margin: 5vh 0 0 0;
+	padding: 5vh 0 0.1vh 0;
+	background: #292929;
+	color: #fff;
+	text-align: center;
+}
+footer a, footer a:hover, footer a:active, footer a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.sectionTitle {
+	width: 100%;
+	font-size: 28px;
+	font-family: 'Comfortaa', cursive;
+	cursor: default;
+}
+.sectionSubTitle {font-weight: bold;}
+.ag-row > .ag-col{
+	color: #555;
+	text-align: center;
+	font-style: italic;
+	font-size: 14px;
+}
+.dark-row {
+	background: #bbb;
+	text-align: center;
+}
+.medium-dark-row {
+	background: #ccc;
+	text-align: center;
+}
+.light-row {
+	background: #ddd;
+	text-align: center;
+}
+.space-top-20 {margin-top: 20px}
+.space-top-50 {margin-top: 50px}
+/*.pp-row .pp-col,
+.pp-row .pp-col-sm-1,
+.pp-row .pp-col-sm-2,
+.pp-row .pp-col-sm-3,
+.pp-row .pp-col-sm-4,
+.pp-row .pp-col-sm-5,
+.pp-row .pp-col-sm-6,
+.pp-row .pp-col-sm-7,
+.pp-row .pp-col-sm-8,
+.pp-row .pp-col-sm-9,
+.pp-row .pp-col-sm-10,
+.pp-row .pp-col-sm-11,
+.pp-row .pp-col-sm-12,
+.pp-row .pp-col-md-1,
+.pp-row .pp-col-md-2,
+.pp-row .pp-col-md-3,
+.pp-row .pp-col-md-4,
+.pp-row .pp-col-md-5,
+.pp-row .pp-col-md-6,
+.pp-row .pp-col-md-7,
+.pp-row .pp-col-md-8,
+.pp-row .pp-col-md-9,
+.pp-row .pp-col-md-10,
+.pp-row .pp-col-md-11,
+.pp-row .pp-col-md-12,
+.pp-row .pp-col-lg-1,
+.pp-row .pp-col-lg-2,
+.pp-row .pp-col-lg-3,
+.pp-row .pp-col-lg-4,
+.pp-row .pp-col-lg-5,
+.pp-row .pp-col-lg-6,
+.pp-row .pp-col-lg-7,
+.pp-row .pp-col-lg-8,
+.pp-row .pp-col-lg-9,
+.pp-row .pp-col-lg-10,
+.pp-row .pp-col-lg-11,
+.pp-row .pp-col-lg-12 {
+	text-align: center;
+}*/

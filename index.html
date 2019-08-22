@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+
+		<meta name="theme-color" content="#0378A6" />
+
+		<meta property="og:title" content="pompeijs">
+		<meta property="og:description" content="pompeijs CSS/JQuery Library">
+		<meta property="og:image" content="https://philipi.bovo.me/pompeijs/img/social.png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:type" content="article">
+		<meta property="og:locale" content="pt_BR">
+		<meta property="og:site_name" content="pompeijs">
+		<meta property="og:url" content="https://philipi.bovo.me/pompeijs/">
+
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="pompeijs.js" />
+		<meta name="twitter:url" content="https://philipi.bovo.me/pompeijs" />
+		<meta name="twitter:image" content="https://philipi.bovo.me/pompeijs/img/social.png">
+
+		<link rel="icon" href="img/favicon.png" />
+		
+		<title>pompei.js</title>
+
+		<link rel="icon" href="img/favicon.png" />
+
+		<link rel="stylesheet" href="css/mycode-display.css">
+		<link rel="stylesheet" href="css/pompei-1.0.0.min.css">
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="css/mobile.css" media="screen and (min-width:0px) and (max-width:480px)">
+	</head>
+	<body>
+		<header>
+			<img src="img/pompeijs-negative.png">
+		</header>
+
+		<main>
+			<section id="download">
+				<div class="pp-row">
+					<div class="pp-col">
+						<button>DOWNLOAD</button>
+						<p>1.0.0</p>
+					</div>
+				</div><!-- end .pp-row -->
+			</section><!-- end #download -->
+
+			<section id="what-is">
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="sectionTitle">O que é pompei.js?</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>O pompei.js é uma biblioteca que surgiu da necessidade de ter mais agilidade ao criar layouts, baseado em colunas responsivas ganhamos em agilidade ao estruturar automaticamente o código HTML.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Por ser totalmente adaptável ao tamanho da tela, é possível infinitas combinações de colunas, tornando assim um sistema de grid totalmente personalizável e responsivo, com um aplicação extremamente simples e rápida.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>É possível usar colunas redimensionadas de acordo com a largura do elemento pai, como também é possível usar colunas com largura fixa, sendo cada uma da mesma proporção em % pré estabelecida. Assim teremos layouts diferentes para cada tipo de tela (Smartphone, Tablet e Computador).</p>
+					</div>
+				</div><!-- end .pp-row -->
+			</section><!-- end #what-is -->
+
+			<section id="how-use">
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="sectionTitle space-top-20">Como Usar?</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>1. Inclua em seu arquivo HTML o arquivo CSS do pompei.js</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;link rel="stylesheet" href="pompei-0.0.1.min.css"&gt;</p>
+						</div><!-- end .mycode -->
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-20">2. Inclua em seu arquivo HTML a biblioteca JQuery</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"&gt;&lt;/script&gt;</p>
+							<p class="line">&lt;script type="text/javascript" src="pompei-0.0.1.min.js"&gt;&lt;/script&gt;</p>
+						</div><!-- end .mycode -->
+					</div>
+				</div><!-- end .pp-row -->
+			</section><!-- end #how-use -->
+
+			<section id="how-work" class="space-top-20">
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="sectionTitle space-top-20">Como funciona?</div>						
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>O tamanho de cada coluna vai depender da quantidade de colunas presente dentro de uma linha.</p>
+					</div>
+				</div><!-- end .pp-row -->
+				
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Cada linha <strong>'pp-row'</strong> vai ter 100% de largura do elemento logo acima dele. O tamanho de cada coluna <strong>'pp-col'</strong> é calculado em tempo de execução. Para obter a largura de cada coluna, a largura da linha é dividida pela quantidade colunas, com isso você terá colunas com a mesma largura, independente quantidade de colunas.</p>
+					</div>
+				</div><!-- end .pp-row -->
+				
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo temos uma linha <strong>'pp-row'</strong> com 5 colunas <strong>'pp-col'</strong>.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col pp-col-lg-4 dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-col-lg-4 light-row">
+						Col 2
+					</div>
+					<div class="pp-col pp-col-lg-4 dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col light-row">
+						Col 2
+					</div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+					<div class="pp-col light-row">
+						Col 4
+					</div>
+					<div class="pp-col dark-row">
+						Col 5
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+			</section><!-- end #how-work -->
+
+			<section id="option">
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="sectionTitle space-top-20">Opções</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle">Coluna mais larga</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Para que uma coluna tenha uma largura maior basta adicionar a classe <strong>'pp-colspan-*'</strong> ao elemeto <strong>'pp-col'</strong>, onde <strong>'*'</strong> é a quantidade de partes que a coluna vai ocupar.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+							<p>Por exemplo, se tem uma linha com 9 colunas, mas uma coluna tem a classe <strong>'pp-colspan-2'</strong>, essa coluna terá a largura de 16.66666667 enquanto as outras 8 colunas terão largura de 8.33333333%. Totalizando assim 100% da largura da linha</p>						
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo temos uma linha <strong>'pp-row'</strong> com 3 colunas <strong>'pp-col'</strong> sendo que a segunda coluna tem largura de 4 colunas.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-colspan-4 light-row">
+						Col 2
+					</div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-colspan-4"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+				
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle space-top-50">Coluna de espaço vazio</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Para deixar um espaço vazio com a largura de uma coluna, basta inserir a classe <strong>'pp-offset'</strong> ao elemento <strong>'pp-col'</strong>.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Também é possível definir a largura com a classe <strong>'pp-colspan-*'</strong> da mesma forma do exemplo acima.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo a primeira coluna é vazia.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col pp-offset"></div>
+					<div class="pp-col dark-row">
+						Col 2
+					</div>
+					<div class="pp-col light-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-offset"&gt;&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-50">No exemplo abaixo, a coluna do meio é vazia.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-offset"></div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->		
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-offset"&gt;&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-50">No exemplo abaixo, a última coluna é vazia.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col light-row">
+						Col 2
+					</div>
+					<div class="pp-col pp-offset"></div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-offset"&gt;&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-50">No exemplo abaixo, a primeira e a última coluna são vazia.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col pp-offset"></div>
+					<div class="pp-col dark-row">
+						Col 2
+					</div>
+					<div class="pp-col pp-offset"></div>
+				</div><!-- end .pp-row -->		
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-offset"&gt;&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-offset"&gt;&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-50">No exemplo abaixo, a coluna do meio é vazia e tem tamanho de 4 colunas.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-offset pp-colspan-4"></div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->		
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-offset pp-colspan-4"&gt;&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle space-top-50">Margem</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Com o pompei.js, por padrão, cada coluna tem 5 pixels de margen de lado esquerdo e 5 pixels de margem do lado direito, totalizando assim 10 pixels de margens laterais.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>É possível setar 0 para as margens das colunas. Para isso use a classe <strong>'pp-no-margin'</strong>.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>A classe <strong>'pp-no-margin'</strong> pode ser aplicada em cada coluna ou ser aplicada diretamente na linha.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Quando a classe <strong>'pp-no-margin'</strong> é aplicada na coluna, somente está coluna ficará sem as margens laterais, as demais colunas da linha continuarão com margens laterais.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Quando a classe <strong>'pp-no-margin'</strong> é aplicada diretamente na linha, todas as colunas desta linha ficarão sem margens laterais.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col light-row">
+						Col 2
+					</div>
+					<div class="pp-col pp-no-margin dark-row">
+						Col 3
+					</div>
+					<div class="pp-col pp-no-margin light-row">
+						Col 4
+					</div>
+					<div class="pp-col dark-row">
+						Col 5
+					</div>
+					<div class="pp-col light-row">
+						Col 6
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row pp-no-margin"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-no-margin"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-no-margin"&gt;</p>
+							<p class="line space-2">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 6</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo acima, somente as colunas 3 e 4 estão sem margens, pois somente nelas foi aplicada a classe <strong>'pp-no-margin'</strong>, as demais continuam com as margens laterais de 5px de cada lado.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row pp-no-margin">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col light-row">
+						Col 2
+					</div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+					<div class="pp-col light-row">
+						Col 4
+					</div>
+					<div class="pp-col dark-row">
+						Col 5
+					</div>
+					<div class="pp-col light-row">
+						Col 6
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row pp-no-margin"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-1">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 6</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo acima a classe <strong>'pp-no-padding'</strong> foi aplicada diretamente na linha, assim todas as colunas ficaram sem margens laterais.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle space-top-50">Espaço Interno</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Com o pompei.js, por padrão, cada coluna tem 10 pixels de espaço interno do lado esquerdo, 10 pixels de espaço interno do lado direito, 5 pixels de espaço interno em cima e 5 pixels de espaço interno embaixo. Somando assim 20 pixels espaço interno laterais e 10 pixels de espaço interno na vertical.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>É possível setar 0 para os espaços interno das colunas. Para isso use a classe <strong>'pp-no-padding'</strong>.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>A classe <strong>'pp-no-padding'</strong> pode ser aplicada em cada coluna ou ser aplicada diretamente na linha.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Quando a classe <strong>'pp-no-padding'</strong> é aplicada na coluna, somente está coluna ficará sem espaços interno, as demais colunas da linha continuarão com os espaçoes internos.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Quando a classe <strong>'pp-no-padding'</strong> é aplicada diretamente na linha, todas as colunas desta linha ficarão sem espaços internos.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col light-row">
+						Col 2
+					</div>
+					<div class="pp-col pp-no-padding dark-row">
+						Col 3
+					</div>
+					<div class="pp-col pp-no-padding light-row">
+						Col 4
+					</div>
+					<div class="pp-col dark-row">
+						Col 5
+					</div>
+					<div class="pp-col light-row">
+						Col 6
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row pp-no-margin"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-no-padding"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-no-padding"&gt;</p>
+							<p class="line space-2">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 6</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo acima, somente as colunas 3 e 4 estão sem espaços internos, pois somente nelas foi aplicada a classe <strong>'pp-no-padding'</strong>, as demais continuam com os espaços internos.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row pp-no-padding">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col light-row">
+						Col 2
+					</div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+					<div class="pp-col light-row">
+						Col 4
+					</div>
+					<div class="pp-col dark-row">
+						Col 5
+					</div>
+					<div class="pp-col light-row">
+						Col 6
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row pp-no-padding"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 6</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo acima a classe <strong>'pp-no-padding'</strong> foi aplicada diretamente na linha, assim todas as colunas ficaram sem espaços internos.</p>
+					</div>
+				</div><!-- end .pp-row -->
+			</section><!-- end #option -->
+
+			<section id="devices">
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="sectionTitle space-top-20">Tipos de telas</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Baseado na largura da tela, é possível criar diferentes layouts para cada tipo de tela, por exemplo: um layout para telas de smartphones, um para telas de tablets e para telas de computadores.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Smartphones (sm): telas de até <strong>575px</strong> de largura.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Tablets (md): telas entre <strong>576px</strong> até <strong>991px</strong> de largura.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Computadores (lg): telas maiores que <strong>991px</strong>.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle space-top-50">Coluna mais larga por tipo de tela</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>É possível determinar que uma coluna seja mais larga apenas em um tipo de tela, basta inserir a classe <strong>'pp-colspan-{TipoDeTela}-*'</strong>, onde {TipoDeTela} é <strong>'sm'</strong> para smartphone, <strong>'md'</strong> para tablets e <strong>'lg'</strong> para computadores.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, a coluna do meio tem largura 3 apenas para smartphones (sm).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row" id="ex1">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-colspan-sm-3 light-row">
+						Col 2
+					</div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-colspan-sm-3"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, a coluna do meio tem largura 3 apenas para tablets (md).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-colspan-md-3 light-row">
+						Col 2
+					</div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-colspan-md-3"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, a coluna do meio tem largura 3 apenas para computadores (lg).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-colspan-lg-3 light-row">
+						Col 2
+					</div>
+					<div class="pp-col dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-colspan-lg-3"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle space-top-50">Coluna mais larga por tipo de tela</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>É possível ocultar uma coluna <strong>'pp-col'</strong> para determinado tipo de tela. Também aplicavél em colunas de espaço vazio <strong>'pp-offset'</strong></p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Quando um coluna é ocultada, ela não é considerada para o cálculo de largura das colunas.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, a coluna do meio é oculta para smartphone (sm).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-hidden-sm light-row">
+						Col 2
+					</div>
+					<div class="pp-col medium-dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-hidden-sm"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, a coluna do meio é oculta para tablets (md).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-hidden-md light-row">
+						Col 2
+					</div>
+					<div class="pp-col medium-dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-hidden-md"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, a coluna do meio é oculta para computadores (lg).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col dark-row">
+						Col 1
+					</div>
+					<div class="pp-col pp-hidden-lg light-row">
+						Col 2
+					</div>
+					<div class="pp-col medium-dark-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-hidden-lg"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, as colunas de espaço vazio são ocultadas em telas de smartphone (sm) e tablets (md).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col pp-hidden-sm pp-hidden-md pp-offset"></div>
+					<div class="pp-col medium-dark-row">
+						Col 2
+					</div>
+					<div class="pp-col pp-hidden-sm pp-hidden-md pp-offset"></div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-hidden-sm pp-hidden-md pp-offset"&gt;&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col pp-hidden-sm pp-hidden-md pp-offset"&gt;&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+			</section><!-- end #device -->
+
+			<section id="pre-fixed">
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="sectionTitle space-top-20">Colunas de tamanho pré-definido</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Neste caso, cada coluna tem 8,3333333% de largura em relação a largura total do elemento pai. Cada linha tem um total de 12 colunas, somando assim 100% da largura do elemento pai.</p>
+					</div>
+				</div><!-- end .pp-row -->
+				
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Com os tamanhos pré-definidos podemos exibir colunas de larguras diferentes de acordo com cada tipo de telas.</p>
+					</div>
+				</div><!-- end .pp-row -->
+				
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Numa mesma linha podemos ter 4 elementos de largura 1 e 2 elementos de largura 4, totalizando assim a largura total de 12. Caso a soma das larguras ultrapasse 100% da largura do elemento pai, automaticamente irá quebrar uma linha e o elemento irá para a linha de baixo.</p>
+					</div>
+				</div><!-- end .pp-row -->
+				
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>É possível definir larguras diferentes para cada tipo de tela (Smartphone, Tablet e Computador) no mesmo elemento, conforme exemplo abaixo:</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 1
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 2
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 3
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 4
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 5
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 6
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 7
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 8
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 9
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 10
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 11
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 12
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 6</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 7</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 8</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 9</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 10</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 11</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 12</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-20">No exemplo acima, quando for um Computador (lg) mostrará 12 colunas, cada uma foi definio 8,3333333% de largura (<strong>'pp-col-lg-1'</strong>), porém quando for Tablet (md) mostrará as mesmas 12 colunas mas terá 6 em cada linha, pois neste caso cada coluna foi definida com 16,6666666% de largura (<strong>'pp-col-md-2'</strong>) e para Smartphone (sm), mostrará as mesmas 12 colunas, mas apenas duas por linha já que as colunas foram definidas com 50% de largura (<strong>'pp-col-sm-6'</strong>).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle space-top-50">Coluna de espaço vazio de tamanho pré definido</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Para deixar um espaco vazio, basta inserir a classe <strong>'pp-offset-sm-*', 'pp-offset-md-*' 'pp-offset-lg-*'</strong> ao elemento <strong>'pp-col-**-*'</strong>, onde * é a largura do espaço, ou seja se for 3 o espaço vazio irá ocupar a largura de 3 colunas a esquerda do elemento.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col-sm-5 pp-offset-sm-5 pp-col-md-2 pp-offset-md-2 pp-col-lg-1 pp-offset-lg-1 light-row">
+						Col 2
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 3
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 4
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 5
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 6
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 7
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 8
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 9
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 10
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 dark-row">
+						Col 11
+					</div>
+					<div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1 light-row">
+						Col 12
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-offset-sm-5 pp-col-md-2 pp-offset-md-2 pp-col-lg-1 pp-offset-lg-1"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 6</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 7</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 8</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 9</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 10</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 11</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-sm-5 pp-col-md-2 pp-col-lg-1"&gt;</p>
+							<p class="line space-2">Col 12</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-20">No exemplo acima, não temos a coluna 1, no lugar dela foi definido na coluna 2 que a mesma terá um espaço vazio a esquerda, esse espaço será de 1 coluna em Computador (<strong>'pp-offset-lg-1'</strong>), 2 colunas em Tablet (<strong>'pp-offset-col-md-2'</strong>) e de 5 colunas em Smartphone (<strong>'pp-offset-sm-5'</strong>).</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="sectionSubTitle space-top-50">Mesclando tamanho pré-definido com tamanho dinâmico</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>Também é possível mesclar uma linha que tem colunas com tamanho pré-definidos e com colunas de tamanho dinâmico.</p>
+					</div>
+				</div><!-- end .pp-row -->
+				
+				<div class="pp-row">
+					<div class="pp-col">
+						<p>No exemplo abaixo, temos uma linha com as 3 primeiras colunas definidas com <strong>'pp-col-sm-2'</strong>, <strong>'pp-col-md-2'</strong> e <strong>'pp-col-lg-2'</strong>, ou seja, em Smartphones, Tablets e Computadores, as 3 primeiras colunas ocuparão 50% da linha. Depois temos 6 colunas dinâmicas (<strong>'pp-col'</strong>) que ocuparão os 50% restante da linha.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col-sm-2 pp-col-md-2 pp-col-lg-2 light-row">
+						Col 1
+					</div>
+					<div class="pp-col-sm-2 pp-col-md-2 pp-col-lg-2 dark-row">
+						Col 2
+					</div>
+					<div class="pp-col-sm-2 pp-col-md-2 pp-col-lg-2 light-row">
+						Col 3
+					</div>
+					<div class="pp-col dark-row">
+						Col 4</div>
+					<div class="pp-col light-row">
+						Col 5
+					</div>
+					<div class="pp-col dark-row">
+						Col 6
+					</div>
+					<div class="pp-col light-row">
+						Col 7
+					</div>
+					<div class="pp-col dark-row">
+						Col 8
+					</div>
+					<div class="pp-col light-row">
+						Col 9
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-lg-2"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-lg-2"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-lg-2"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 4</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 5</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 6</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 7</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<p class="space-top-20">No exemplo abaixo, a primeira e a última coluna tem largura 3 em Computadores (<strong>'pp-col-lg-3'</strong>) e a coluna do meio tem largura dinâmica, ou seja ela ocupará 50% da linha equanto a primeira e a última ocuparão 25% cada.</p>
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col-sm-3 pp-col-md-3 pp-col-lg-3 light-row">
+						Col 1
+					</div>
+					<div class="pp-col dark-row">
+						Col 2
+					</div>
+					<div class="pp-col-sm-3 pp-col-md-3 pp-col-lg-3 light-row">
+						Col 3
+					</div>
+				</div><!-- end .pp-row -->
+
+				<div class="pp-row">
+					<div class="pp-col">
+						<div class="mycode space-top-20">
+							<p class="lang">HTML</p>
+							<p class="line">&lt;div class="pp-row"&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-lg-3"&gt;</p>
+							<p class="line space-2">Col 1</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col"&gt;</p>
+							<p class="line space-2">Col 2</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line space-1">&lt;div class="pp-col-lg-3"&gt;</p>
+							<p class="line space-2">Col 3</p>
+							<p class="line space-1">&lt;/div&gt;</p>
+							<p class="line">&lt;/div&gt;</p>
+						</div>
+					</div>
+				</div><!-- end .pp-row -->
+			</section><!-- end #pre-fixed -->
+		</main>
+		
+		<footer>
+			<img src="img/logo-philipi-negative.png">
+			<p>Desenvolvido por Philipi Bovo - <a href="http://philipi.bovo.me" target="_blank">philipi.bovo.me</a></p>
+		</footer>
+
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/mycode-display.js"></script>
+		<script type="text/javascript" src="js/pompei-1.0.0.min.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
+	</body>
+</html>
