@@ -1,7 +1,30 @@
 header {
-	width: 100%;
-	background-image: linear-gradient(45deg, #0378A6, #57B56B);
-	padding: 2vh 0;
-	text-align: center;
+  width: 100%;
+  background-image: linear-gradient(45deg, #0378a6, #57b56b);
+  padding: 2vh 0;
+  text-align: center;
 }
-header > img {width: 50%}
+header > img {
+  width: 50%;
+}
+section {
+  text-align: center;
+}
+section#start div#or {
+  position: absolute;
+  width: 40px;
+  left: calc(50% - 20px);
+  margin-top: -240px;
+  background: #fff;
+  z-index: 1;
+}
+section#start div#github {
+  border-right: none;
+  border-bottom: 1px dashed #444;
+  padding-right: 0;
+  padding-bottom: 40px;
+}
+section#start div#package {
+  padding-left: 10px;
+  padding-top: 40px;
+}

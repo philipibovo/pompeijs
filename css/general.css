@@ -32,27 +32,59 @@ section p {
 	margin: 0;
 	line-height: 1.1;
 }
-section#download {
+section#start {
+	background: #fff;
+}
+section#start div#or {
+  position: absolute;
+  width: 40px;
+  left: calc(50% - 27px);
+  margin-top: -110px;
 	background: #fff;
 	text-align: center;
+  z-index: 1;
 }
-section#download button, section#download button:active, section#download button:visited {
+section#start div#github .title,
+section#start div#package .title {
+	font-size: 36px;
+}
+section#start div#github {
+	border-right: 1px dashed #444;
+	padding-right: 40px;
+}
+section#start div#github a,
+section#start div#github a:active,
+section#start div#github a:visited {
+  color: #444;
+  text-decoration: none;
+}
+section#start div#github a:hover {
+  text-decoration: underline;
+}
+section#start div#package {
+	padding-left: 25px;
+}
+section#start div#package button#btn-download,
+section#start div#package button#btn-download:active,
+section#start div#package button#btn-download:visited {
 	background: #fff	;
 	border: 3px solid #0378A6	;
-	padding: 15px 30px;
-	font-size: 30px;
+	padding: 10px 25px;
+	font-size: 25px;
 	color: #0378A6;
 	transition: 500ms;
 	border-radius: 5px;
 	cursor: pointer;
 }
-section#download > button:hover {
+section#start div#package button#btn-download:hover {
 	background: #0378A6;
 	color: #fff;
 	border-color: #fff;
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
-section#download > p {margin: 5px;}
+section#start div#package button#btn-download span {
+	font-size: 14px;
+}
 footer {
 	width: 100%;
 	margin: 5vh 0 0 0;
@@ -90,44 +122,7 @@ footer a, footer a:hover, footer a:active, footer a:visited {
 	background: #ddd;
 	text-align: center;
 }
+.space-top-10 {margin-top: 10px}
 .space-top-20 {margin-top: 20px}
+.space-top-30 {margin-top: 30px}
 .space-top-50 {margin-top: 50px}
-/*.pp-row .pp-col,
-.pp-row .pp-col-sm-1,
-.pp-row .pp-col-sm-2,
-.pp-row .pp-col-sm-3,
-.pp-row .pp-col-sm-4,
-.pp-row .pp-col-sm-5,
-.pp-row .pp-col-sm-6,
-.pp-row .pp-col-sm-7,
-.pp-row .pp-col-sm-8,
-.pp-row .pp-col-sm-9,
-.pp-row .pp-col-sm-10,
-.pp-row .pp-col-sm-11,
-.pp-row .pp-col-sm-12,
-.pp-row .pp-col-md-1,
-.pp-row .pp-col-md-2,
-.pp-row .pp-col-md-3,
-.pp-row .pp-col-md-4,
-.pp-row .pp-col-md-5,
-.pp-row .pp-col-md-6,
-.pp-row .pp-col-md-7,
-.pp-row .pp-col-md-8,
-.pp-row .pp-col-md-9,
-.pp-row .pp-col-md-10,
-.pp-row .pp-col-md-11,
-.pp-row .pp-col-md-12,
-.pp-row .pp-col-lg-1,
-.pp-row .pp-col-lg-2,
-.pp-row .pp-col-lg-3,
-.pp-row .pp-col-lg-4,
-.pp-row .pp-col-lg-5,
-.pp-row .pp-col-lg-6,
-.pp-row .pp-col-lg-7,
-.pp-row .pp-col-lg-8,
-.pp-row .pp-col-lg-9,
-.pp-row .pp-col-lg-10,
-.pp-row .pp-col-lg-11,
-.pp-row .pp-col-lg-12 {
-	text-align: center;
-}*/
