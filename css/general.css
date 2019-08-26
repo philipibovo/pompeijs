@@ -1,128 +1,213 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Roboto|Source+Code+Pro');
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300|Roboto|Source+Code+Pro");
 
-::-webkit-scrollbar{width:6px;border-left:1px solid #E6ECF8}
-::-webkit-scrollbar-thumb{background-color:#ccc}.is-form-page
-
-html, body {
-	margin: 0;
-	padding: 
-	color: #444;
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
+::-webkit-scrollbar {
+  width: 6px;
+  border-left: 1px solid #e6ecf8;
 }
-header, main, section, footer {clear: both;}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+header,
+main,
+section,
+footer {
+  clear: both;
+}
+
 header {
-	width: 100%;
-	background-image: linear-gradient(45deg, #0378A6, #57B56B);
-	padding: 5vh 0;
-	text-align: center;
+  width: 100%;
+  background-image: linear-gradient(45deg, #0378a6, #57b56b);
+  padding: 5vh 0;
+  text-align: center;
 }
-header > img {width: 25%}
+
+header > img {
+  width: 25%;
+}
+
 main {
-	width: 100%;
-	margin: 0;
-	padding: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
 section {
-	width: 90%;
-	margin: 0 5%;
-	padding-top: 5vh;
+  width: 90%;
+  margin: 0 5%;
+  padding-top: 5vh;
 }
+
 section p {
-	margin: 0;
-	line-height: 1.1;
+  margin: 0;
+  line-height: 1.1;
 }
+
 section#start {
-	background: #fff;
+  background: #fff;
 }
+
 section#start div#or {
   position: absolute;
   width: 40px;
   left: calc(50% - 27px);
   margin-top: -110px;
-	background: #fff;
-	text-align: center;
+  background: #fff;
+  text-align: center;
   z-index: 1;
 }
 section#start div#github .title,
 section#start div#package .title {
-	font-size: 36px;
+  font-size: 36px;
 }
+
 section#start div#github {
-	border-right: 1px dashed #444;
-	padding-right: 40px;
+  border-right: 1px dashed #444;
+  padding-right: 40px;
 }
+
 section#start div#github a,
 section#start div#github a:active,
 section#start div#github a:visited {
   color: #444;
   text-decoration: none;
 }
+
 section#start div#github a:hover {
   text-decoration: underline;
 }
+
 section#start div#package {
-	padding-left: 25px;
+  padding-left: 25px;
 }
+
 section#start div#package button#btn-download,
 section#start div#package button#btn-download:active,
 section#start div#package button#btn-download:visited {
-	background: #fff	;
-	border: 3px solid #0378A6	;
-	padding: 10px 25px;
-	font-size: 25px;
-	color: #0378A6;
-	transition: 500ms;
-	border-radius: 5px;
-	cursor: pointer;
+  background: #fff;
+  border: 3px solid #0378a6;
+  padding: 10px 25px;
+  font-size: 25px;
+  color: #0378a6;
+  transition: 500ms;
+  border-radius: 5px;
+  cursor: pointer;
 }
+
 section#start div#package button#btn-download:hover {
-	background: #0378A6;
-	color: #fff;
-	border-color: #fff;
-	transform: scale(1.1);
+  background: #0378a6;
+  color: #fff;
+  border-color: #fff;
+  transform: scale(1.1);
 }
+
 section#start div#package button#btn-download span {
-	font-size: 14px;
+  font-size: 14px;
 }
-footer {
-	width: 100%;
-	margin: 5vh 0 0 0;
-	padding: 5vh 0 0.1vh 0;
-	background: #292929;
-	color: #fff;
-	text-align: center;
+
+footer#contact {
+  height: 200px;
+  color: #fff;
+  background: #292929;
+  text-align: center;
+  border-top: 8px double #fff;
+  padding: 15px 0 1px 0;
 }
-footer a, footer a:hover, footer a:active, footer a:visited {
-	color: #fff;
-	text-decoration: none;
+
+footer#contact img {
+  width: 110px;
 }
+
+footer#contact h3 {
+  font-family: "Comfortaa", cursive;
+}
+
+footer#contact a,
+footer#contact a:active,
+footer#contact a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer#contact a:hover {
+  text-decoration: underline;
+}
+
+footer#contact .links {
+  width: 180px;
+  margin-left: calc(50% - 90px);
+}
+
+footer#contact .item {
+  text-align: center;
+  font-size: 30px;
+}
+
+footer#contact .item a {
+  color: #fff;
+  background: #292929;
+  transition: all 200ms;
+}
+
+footer#contact .item a:hover i {
+  transform: scale(1.5);
+  transition: all 200ms;
+}
+
 .sectionTitle {
-	width: 100%;
-	font-size: 28px;
-	font-family: 'Comfortaa', cursive;
-	cursor: default;
+  width: 100%;
+  font-size: 28px;
+  font-family: "Comfortaa", cursive;
+  cursor: default;
 }
-.sectionSubTitle {font-weight: bold;}
-.ag-row > .ag-col{
-	color: #555;
-	text-align: center;
-	font-style: italic;
-	font-size: 14px;
+
+.sectionSubTitle {
+  font-weight: bold;
 }
+
+.ag-row > .ag-col {
+  color: #555;
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+}
+
 .dark-row {
-	background: #bbb;
-	text-align: center;
+  background: #bbb;
+  text-align: center;
 }
+
 .medium-dark-row {
-	background: #ccc;
-	text-align: center;
+  background: #ccc;
+  text-align: center;
 }
+
 .light-row {
-	background: #ddd;
-	text-align: center;
+  background: #ddd;
+  text-align: center;
 }
-.space-top-10 {margin-top: 10px}
-.space-top-20 {margin-top: 20px}
-.space-top-30 {margin-top: 30px}
-.space-top-50 {margin-top: 50px}
+
+.space-top-10 {
+  margin-top: 10px;
+}
+
+.space-top-20 {
+  margin-top: 20px;
+}
+
+.space-top-30 {
+  margin-top: 30px;
+}
+
+.space-top-50 {
+  margin-top: 50px;
+}
